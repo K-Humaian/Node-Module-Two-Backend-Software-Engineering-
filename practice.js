@@ -35,9 +35,7 @@ project.get('/user/:id', (req, res) => {
         .catch(error => {
             console.error("Error fetching data:", error.message);
         })
-        
     res.send("OK");
-
 })
 
 
