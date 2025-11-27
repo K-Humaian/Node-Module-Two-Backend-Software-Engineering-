@@ -7,14 +7,15 @@ function print()
 
 function display(data)
 {
-    age = 30; // y is declared without var, let or const, so it becomes a global variable
+    const age = 30; // Declare age to avoid accidental global variable
     const y = 20;
     // y = 24; // This will cause an error because y is a constant and cannot be reassigned.
     console.log("Inside the display function: " + y)
+    return age; // Return age from display function
 }
 
 print();
-display();
+ const age = display(); // Capture the returned age
 console.log("Outside the display funtion: " + age);
 // console.log(x)
 
