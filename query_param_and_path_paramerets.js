@@ -24,8 +24,9 @@ app.get('/student', (req, res) => {
         Section : "8DM",
         Semester: "8th"
     });
+    console.log(req.query.id); // Accessing query parameter
 })
 
-app.listen(3000, (req, res) => {
+app.listen(3000, () => {
     console.log("Server is running on port 3000...");
 });
