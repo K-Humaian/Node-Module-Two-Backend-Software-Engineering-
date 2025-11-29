@@ -13,8 +13,9 @@ app.get('/home', (req, res) => {
     res.send("This is a Home Page.")
 })
 
-app.get('/user', (req, res) => {
+app.get('/user/:Age', (req, res) => {
     res.json(user);
+    console.log("Accessing the path or route parameter => ",req.params.Age); // Accessing path or route parameter
 })
 
 app.get('/student', (req, res) => {
@@ -24,7 +25,9 @@ app.get('/student', (req, res) => {
         Section : "8DM",
         Semester: "8th"
     });
-    console.log(req.query.id); // Accessing query parameter
+    console.log("Accessing the query parameter. => ",req.query.id); // Accessing query parameter
+    console.log("Accessing the query parameter. => ",req.query.name); // Accessing query parameter
+
 })
 
 app.listen(3000, () => {
